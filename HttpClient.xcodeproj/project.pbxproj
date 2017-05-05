@@ -12,9 +12,13 @@
 		1B2E41CD1EBBDED50015508F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E41CB1EBBDED50015508F /* Main.storyboard */; };
 		1B2E41CF1EBBDED50015508F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E41CE1EBBDED50015508F /* Assets.xcassets */; };
 		1B2E41D21EBBDED50015508F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E41D01EBBDED50015508F /* LaunchScreen.storyboard */; };
+		1B2E41DF1EBC00930015508F /* Clima.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E41DE1EBC00930015508F /* Clima.swift */; };
+		1B2E41E11EBC00ED0015508F /* ClimaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E41E01EBC00ED0015508F /* ClimaApi.swift */; };
+		F657A3259E6DAD81F096F0D8 /* Pods_HttpClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC55BB3CDEBB57FDFE43327F /* Pods_HttpClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00E8A1D1FFE8EDAFA9689E19 /* Pods-HttpClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-HttpClient/Pods-HttpClient.release.xcconfig"; sourceTree = "<group>"; };
 		1B2E41C41EBBDED50015508F /* HttpClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E41C71EBBDED50015508F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B2E41C91EBBDED50015508F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		1B2E41CE1EBBDED50015508F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B2E41D11EBBDED50015508F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B2E41D31EBBDED50015508F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B2E41DE1EBC00930015508F /* Clima.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clima.swift; sourceTree = "<group>"; };
+		1B2E41E01EBC00ED0015508F /* ClimaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaApi.swift; sourceTree = "<group>"; };
+		530E550DF420396F9377E122 /* Pods-HttpClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HttpClient/Pods-HttpClient.debug.xcconfig"; sourceTree = "<group>"; };
+		CC55BB3CDEBB57FDFE43327F /* Pods_HttpClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HttpClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F657A3259E6DAD81F096F0D8 /* Pods_HttpClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F2A73880F34353B116EFD8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				530E550DF420396F9377E122 /* Pods-HttpClient.debug.xcconfig */,
+				00E8A1D1FFE8EDAFA9689E19 /* Pods-HttpClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1B2E41BB1EBBDED50015508F = {
 			isa = PBXGroup;
 			children = (
 				1B2E41C61EBBDED50015508F /* HttpClient */,
 				1B2E41C51EBBDED50015508F /* Products */,
+				0F2A73880F34353B116EFD8C /* Pods */,
+				FA3BDD73073963A5507DAC13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,8 @@
 		1B2E41C61EBBDED50015508F /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
+				1B2E41DD1EBC00770015508F /* Net */,
+				1B2E41DC1EBC00700015508F /* Models */,
 				1B2E41C71EBBDED50015508F /* AppDelegate.swift */,
 				1B2E41C91EBBDED50015508F /* ViewController.swift */,
 				1B2E41CB1EBBDED50015508F /* Main.storyboard */,
@@ -64,6 +86,30 @@
 			path = HttpClient;
 			sourceTree = "<group>";
 		};
+		1B2E41DC1EBC00700015508F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B2E41DE1EBC00930015508F /* Clima.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1B2E41DD1EBC00770015508F /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				1B2E41E01EBC00ED0015508F /* ClimaApi.swift */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		FA3BDD73073963A5507DAC13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC55BB3CDEBB57FDFE43327F /* Pods_HttpClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B2E41D61EBBDED50015508F /* Build configuration list for PBXNativeTarget "HttpClient" */;
 			buildPhases = (
+				504C65BC13EF3F556C21C372 /* [CP] Check Pods Manifest.lock */,
 				1B2E41C01EBBDED50015508F /* Sources */,
 				1B2E41C11EBBDED50015508F /* Frameworks */,
 				1B2E41C21EBBDED50015508F /* Resources */,
+				79339A0FB741D4B165334D67 /* [CP] Embed Pods Frameworks */,
+				B9750F9ED28815ADD0ECC22E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +180,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		504C65BC13EF3F556C21C372 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79339A0FB741D4B165334D67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HttpClient/Pods-HttpClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9750F9ED28815ADD0ECC22E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HttpClient/Pods-HttpClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B2E41C01EBBDED50015508F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1B2E41CA1EBBDED50015508F /* ViewController.swift in Sources */,
+				1B2E41E11EBC00ED0015508F /* ClimaApi.swift in Sources */,
+				1B2E41DF1EBC00930015508F /* Clima.swift in Sources */,
 				1B2E41C81EBBDED50015508F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +357,7 @@
 		};
 		1B2E41D71EBBDED50015508F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 530E550DF420396F9377E122 /* Pods-HttpClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HttpClient/Info.plist;
@@ -270,6 +370,7 @@
 		};
 		1B2E41D81EBBDED50015508F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E8A1D1FFE8EDAFA9689E19 /* Pods-HttpClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HttpClient/Info.plist;
@@ -299,6 +400,7 @@
 				1B2E41D81EBBDED50015508F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

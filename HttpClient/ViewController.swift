@@ -15,9 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var des: UILabel!
     
+    var api:ClimaApi!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        api =  ClimaApi()
+        api.getClima { (clima) in
+            self.des.text = clima.text
+            self.temp.text = clima.temp
+            self.pres.text = clima.pres
+            self.hum.text = clima.hum
+        }
     }
 
     override func didReceiveMemoryWarning() {
